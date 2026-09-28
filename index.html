@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELEVATE — Vidéo gratuite de 13 minutes avec Léticia</title>
+<meta name="description" content="Vous avez déjà un quotidien bien rempli. Découvrez en 13 minutes une autre façon d'envisager votre avenir financier, sans sacrifier votre temps, votre énergie ou votre équilibre.">
+<meta name="author" content="Léticia — ELEVATE Life & Income System">
+<meta name="theme-color" content="#0f2a3d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Et si vous pouviez construire quelque chose à vous ?">
+<meta property="og:description" content="Vidéo gratuite de 13 minutes : une autre façon d'envisager votre avenir financier, sans sacrifier votre équilibre.">
+<meta property="og:image" content="https://d1yei2z3i6k35z.cloudfront.net/16309026/6a7c76cd2d1bd5.24262949_CD0FEE91-A032-4726-890F-DDA8EF97D5CE.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://d1yei2z3i6k35z.cloudfront.net/16309026/6a7c76cd2d1bd5.24262949_CD0FEE91-A032-4726-890F-DDA8EF97D5CE.jpg">
+
+<!-- ============ CONFIGURATION ============ -->
+<script>
+  window.ELEVATE_CONFIG = {
+    // ID du pixel Meta (laisser vide pour désactiver)
+    META_PIXEL_ID: "",
+    // Endpoint serverless qui envoie le lead dans Systeme.io
+    SUBSCRIBE_ENDPOINT: "/api/subscribe",
+    // Page vidéo de secours si l'API ne renvoie pas d'URL
+    FALLBACK_VIDEO_URL: "https://systeme.elevatelifinsy.com/visionnage"
+  };
+</script>
+
+<!-- Meta Pixel (chargé uniquement si un ID est renseigné) -->
+<script>
+  (function(){
+    var id = window.ELEVATE_CONFIG.META_PIXEL_ID;
+    if(!id) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id);
+    fbq('track', 'PageView');
+  })();
+</script>
+
+<style>
+  :root{
+    --ink:#0f2a3d;          /* texte principal : bleu nuit */
+    --ink-soft:#43586a;
+    --muted:#6b7d8c;
+    --bg:#ffffff;
+    --bg-soft:#f3faf8;      /* menthe très pâle (rappel de la page actuelle) */
+    --bg-mint:#e3f5f0;
+    --line:#dbe7e3;
+    --gold:#b8913a;         /* or du logo ELEVATE */
+    --gold-soft:#f6efdf;
+    --cta:#0f8a6a;          /* unique couleur d'action */
+    --cta-hover:#0b7258;
+    --cta-shadow:rgba(15,138,106,.35);
+    --radius:18px;
+    --maxw:1080px;
+    --serif:"DM Serif Display", Georgia, "Times New Roman", serif;
+    --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .narrow{max-width:720px;margin:0 auto}
+  section{padding:72px 0}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0;letter-spacing:-.01em}
+  h2{font-size:clamp(28px,4vw,40px);text-align:center;margin-bottom:18px}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .center{text-align:center}
+  .lead{font-size:clamp(17px,2vw,19px);color:var(--ink-soft)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{border-bottom:1px solid var(--line);background:#fff}
+  .topbar .wrap{display:flex;align-items:center;justify-content:center;height:60px}
+  .brand{font-family:var(--serif);font-size:22px;letter-spacing:.18em;color:var(--gold)}
+  .brand small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.3em;color:var(--ink-soft);text-align:center;margin-top:-2px}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(180deg,var(--bg-mint) 0%,var(--bg-soft) 55%,#fff 100%);padding:48px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(32px,4.6vw,52px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--cta)}
+  .hero .lead{margin:0 0 26px}
+  .for-who{font-size:14px;font-weight:600;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;display:inline-flex;gap:8px;align-items:center;margin-bottom:18px}
+  .for-who .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+  /* Miniature vidéo */
+  .video-thumb{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;box-shadow:0 24px 60px -20px rgba(15,42,61,.45);border:0;padding:0;background:#000;width:100%;aspect-ratio:1500/848}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .video-thumb:hover img{transform:scale(1.03)}
+  .video-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(15,42,61,.55))}
+  .play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:var(--cta);display:grid;place-items:center;box-shadow:0 0 0 0 var(--cta-shadow);animation:pulse 2.2s infinite}
+  .play svg{width:30px;height:30px;margin-left:5px;fill:#fff}
+  .thumb-label{position:absolute;z-index:2;left:16px;bottom:14px;color:#fff;font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
+  .thumb-label .live{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:5px 10px;border-radius:999px}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(15,138,106,.55)}70%{box-shadow:0 0 0 22px rgba(15,138,106,0)}100%{box-shadow:0 0 0 0 rgba(15,138,106,0)}}
+
+  /* CTA */
+  .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--cta);color:#fff;font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:.01em;text-decoration:none;border:0;border-radius:14px;padding:19px 30px;cursor:pointer;box-shadow:0 12px 28px -10px var(--cta-shadow);transition:background .2s,transform .15s;width:100%;max-width:460px;text-transform:uppercase}
+  .cta:hover{background:var(--cta-hover);transform:translateY(-1px)}
+  .cta svg{width:18px;height:18px;fill:#fff;flex:none}
+  .cta-meta{font-size:14px;color:var(--muted);margin-top:12px;display:flex;gap:14px;flex-wrap:wrap}
+  .cta-meta span{display:inline-flex;align-items:center;gap:6px}
+  .cta-meta span::before{content:"✓";color:var(--cta);font-weight:700}
+  .micro{font-size:14.5px;color:var(--ink-soft);margin-top:14px;font-style:normal}
+  .cta-block{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .cta-block .cta-meta{justify-content:center}
+  .hero-cta{align-items:flex-start;text-align:left}
+  .hero-cta .cta-meta{justify-content:flex-start}
+
+  /* ---------- Ce que vous allez découvrir ---------- */
+  .learn{background:#fff}
+  .learn-list{list-style:none;padding:0;margin:36px auto 0;max-width:760px;display:grid;gap:16px}
+  .learn-list li{display:flex;gap:18px;align-items:flex-start;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .num{flex:none;width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:19px;display:grid;place-items:center}
+  .learn-list p{margin:6px 0 0}
+
+  /* ---------- Identification ---------- */
+  .identify{background:var(--ink);color:#fff}
+  .identify h2{color:#fff}
+  .identify .lead{color:#c5d3dd}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+  .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
+  .card h3{font-family:var(--sans);font-weight:700;font-size:18px;margin-bottom:8px;color:#fff}
+  .card p{margin:0;color:#c5d3dd;font-size:16px}
+  .card .ico{width:34px;height:34px;border-radius:10px;background:rgba(184,145,58,.18);display:grid;place-items:center;margin-bottom:14px;color:#e2c47f;font-size:17px}
+
+  /* ---------- Pour qui ---------- */
+  .fit{background:var(--bg-soft)}
+  .fit-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:36px}
+  .fit-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .fit-box h3{font-family:var(--sans);font-size:17px;font-weight:700;margin-bottom:14px}
+  .fit-box ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .fit-box li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+  .fit-box li b{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;margin-top:2px}
+  .yes li b{background:#dff3ec;color:var(--cta)}
+  .no{background:#fbfbfb}
+  .no h3{color:var(--ink-soft)}
+  .no li{color:var(--ink-soft)}
+  .no li b{background:#eee;color:#8a8a8a}
+
+  /* ---------- Mystère ---------- */
+  .mystery{background:#fff}
+  .mystery-box{max-width:780px;margin:0 auto;text-align:center;border:1px solid var(--gold);border-radius:24px;padding:48px 28px;background:linear-gradient(180deg,var(--gold-soft),#fff)}
+  .mystery-box p{margin:0 auto 26px;max-width:600px}
+
+  /* ---------- Léticia ---------- */
+  .about{background:var(--bg-soft)}
+  .about-grid{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center}
+  .portrait{position:relative}
+  .portrait-img{border-radius:24px;aspect-ratio:1/1;width:100%;background:#cfe7f1 url("https://d1yei2z3i6k35z.cloudfront.net/16309026/6a7c76cd2d1bd5.24262949_CD0FEE91-A032-4726-890F-DDA8EF97D5CE.jpg") no-repeat;background-size:300% auto;background-position:50% 3%;box-shadow:0 20px 50px -24px rgba(15,42,61,.5)}
+  .portrait .tag{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:600;font-size:14px;white-space:nowrap;box-shadow:0 6px 16px -8px rgba(0,0,0,.2)}
+  .about h2{text-align:left}
+  blockquote{margin:0 0 22px;padding:0 0 0 20px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:clamp(21px,2.4vw,26px);line-height:1.35;color:var(--ink)}
+  .about p{color:var(--ink-soft);margin:0 0 14px}
+  .about .strong{color:var(--ink);font-weight:600}
+  .link-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:700;color:var(--cta);background:none;border:0;padding:0;font-size:17px;cursor:pointer;font-family:var(--sans);text-decoration:underline;text-underline-offset:4px}
+
+  /* ---------- Première étape ---------- */
+  .step{background:#fff}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bg-soft)}
+  .faq-list{max-width:760px;margin:32px auto 0;display:grid;gap:12px}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px}
+  summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:24px;line-height:1;color:var(--gold);flex:none;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin:0 0 20px;color:var(--ink-soft)}
+
+  /* ---------- CTA final ---------- */
+  .final{background:linear-gradient(180deg,#fff,var(--bg-mint));text-align:center}
+  .final .lines{font-size:19px;margin:0 0 30px;color:var(--ink-soft)}
+  .final .lines b{color:var(--ink)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#9fb1bf;font-size:13.5px;padding:36px 0 110px}
+  footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+  footer a{color:#dbe5ec;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  footer p{max-width:760px;margin:8px auto;text-align:center;line-height:1.55}
+
+  /* ---------- Barre CTA mobile ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s ease;display:none}
+  .sticky.show{transform:none}
+  .sticky .cta{max-width:none;font-size:16px;padding:15px 18px}
+
+  /* ---------- Pop-up ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(10,25,37,.72);backdrop-filter:blur(3px)}
+  .modal.open{display:flex;animation:fade .2s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .dialog{position:relative;background:#fff;width:100%;max-width:460px;border-radius:22px;padding:34px 28px 24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);max-height:calc(100dvh - 32px);overflow:auto;animation:rise .25s ease}
+  @keyframes rise{from{transform:translateY(16px);opacity:.4}to{transform:none;opacity:1}}
+  .close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;background:var(--bg-soft);border-radius:50%;font-size:22px;line-height:1;cursor:pointer;color:var(--ink-soft)}
+  .dialog .progress{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin:4px 48px 20px 0}
+  .dialog .progress span{display:block;height:100%;width:50%;background:var(--cta);border-radius:99px}
+  .dialog .step-label{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .dialog h3{font-size:clamp(24px,5vw,28px);margin-bottom:8px}
+  .dialog .sub{color:var(--ink-soft);font-size:15.5px;margin:0 0 20px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+  .field input{width:100%;font:inherit;font-size:16px;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .15s}
+  .field input:focus{outline:none;border-color:var(--cta);box-shadow:0 0 0 3px rgba(15,138,106,.15)}
+  .field input.invalid{border-color:#c0392b}
+  .field .hint{font-size:12.5px;color:var(--muted);margin-top:5px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-soft);line-height:1.45;margin:6px 0 18px}
+  .consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--cta)}
+  .consent.invalid{color:#c0392b}
+  .dialog .cta{max-width:none;font-size:17px}
+  .dialog .cta[disabled]{opacity:.7;cursor:wait}
+  .form-error{display:none;background:#fdecea;color:#8e2a1e;border-radius:10px;padding:10px 12px;font-size:14px;margin-bottom:14px}
+  .privacy{font-size:12px;color:var(--muted);text-align:center;margin:14px 0 0}
+  .privacy a{color:var(--muted)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .hero-grid{grid-template-columns:1fr;gap:28px}
+    .hero-copy{text-align:center}
+    .hero .cta-meta{justify-content:center}
+    .hero .cta{margin:0 auto}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:280px;margin:0 auto}
+    .about h2{text-align:center}
+    .fit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width: 640px){
+    body{font-size:16px}
+    section{padding:56px 0}
+    .hero{padding:28px 0 44px}
+    .hero-copy .lead{margin-bottom:0}
+    .hero-media{order:-1}
+    .cards{grid-template-columns:1fr}
+    .play{width:70px;height:70px}
+    .play svg{width:24px;height:24px}
+    .sticky{display:block}
+    .cta{font-size:16px;padding:17px 20px}
+    .dialog{padding:30px 20px 20px}
+    .mystery-box{padding:38px 20px}
+  }
+  /* Ordre mobile du hero : titre → miniature → bouton */
+  @media (max-width: 900px){
+    .hero-grid{display:flex;flex-direction:column}
+    .hero-copy{display:contents}
+    .hero-copy .for-who{order:1;align-self:center}
+    .hero-copy h1{order:2;text-align:center}
+    .hero-copy .lead{order:3;text-align:center}
+    .hero-media{order:4}
+    .hero-copy .cta-block{order:5}
+    .hero-cta{align-items:center;text-align:center}
+    .hero-cta .cta-meta{justify-content:center}
+  }
+  @media (max-width: 640px){
+    .hero-grid{gap:16px}
+    .for-who{font-size:12.5px;padding:5px 12px;margin-bottom:0}
+    .hero h1{font-size:28px;margin-bottom:0}
+    .hero .lead{font-size:15.5px;line-height:1.5}
+    .hero .micro{display:none}
+    .hero .cta-meta{margin-top:10px;font-size:13px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">ELEVATE<small>LIFE &amp; INCOME SYSTEM</small></div>
+  </div>
+</header>
+
+<main>
+
+<!-- =============== 1. HERO =============== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="for-who"><span class="dot"></span>Pour les femmes actives qui gèrent déjà tout</div>
+      <h1>Vous avez déjà un quotidien bien rempli.<br><em>Et si vous pouviez quand même construire quelque chose à vous&nbsp;?</em></h1>
+      <p class="lead">Découvrez dans cette <strong>vidéo gratuite de 13 minutes</strong> une autre façon d'envisager votre avenir financier, sans sacrifier davantage votre temps, votre énergie ou votre équilibre.</p>
+      <div class="cta-block hero-cta">
+        <button class="cta js-open" type="button" data-source="hero_bouton">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Je découvre la vidéo gratuite
+        </button>
+        <div class="cta-meta"><span>13 minutes</span><span>Gratuit</span><span>Sans engagement</span></div>
+        <p class="micro">Vous pouvez simplement regarder, comprendre, et décider ensuite si vous souhaitez aller plus loin.</p>
+      </div>
+    </div>
+    <div class="hero-media">
+      <button class="video-thumb js-open" type="button" data-source="hero_miniature" aria-label="Regarder la vidéo gratuite de 13 minutes">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/16309026/6a7c76cd2d1bd5.24262949_CD0FEE91-A032-4726-890F-DDA8EF97D5CE.jpg" width="1500" height="848" alt="Léticia présente la méthode ELEVATE dans une vidéo de 13 minutes">
+        <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="thumb-label"><span class="live">▶ Vidéo gratuite · 13 min</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 2. CE QUE VOUS ALLEZ DÉCOUVRIR =============== -->
+<section class="learn">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Au programme</span></div>
+    <h2>En 13 minutes, vous allez découvrir…</h2>
+    <ol class="learn-list">
+      <li><span class="num">1</span><p><strong>Pourquoi certaines activités en ligne deviennent vite une charge de plus</strong> dans un quotidien déjà bien rempli, et comment l'éviter.</p></li>
+      <li><span class="num">2</span><p><strong>Pourquoi le problème n'est pas le manque de motivation, de talent ou d'idées</strong>, mais souvent l'absence d'un cadre clair.</p></li>
+      <li><span class="num">3</span><p><strong>Ce qui change lorsqu'on dispose d'une approche simple et structurée</strong>, pensée pour quelques heures par semaine.</p></li>
+      <li><span class="num">4</span><p><strong>L'approche de Léticia</strong>, que vous pourrez découvrir tranquillement avant de décider si elle mérite votre attention.</p></li>
+    </ol>
+    <div class="cta-block" style="margin-top:36px">
+      <button class="cta js-open" type="button" data-source="decouvrir">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Je regarde la vidéo gratuite
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 3. IDENTIFICATION =============== -->
+<section class="identify">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Est-ce que cela vous parle&nbsp;?</span></div>
+    <h2>Peut-être que vous vous reconnaissez…</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">◆</div>
+        <h3>Vous êtes déjà très active.</h3>
+        <p>Votre travail, votre famille, vos responsabilités, vos projets… vos journées sont bien remplies.</p>
+      </div>
+      <div class="card">
+        <div class="ico">◆</div>
+        <h3>Vous avez envie de construire quelque chose qui vous appartient.</h3>
+        <p>Pas forcément tout changer du jour au lendemain. Simplement commencer à créer une nouvelle possibilité pour votre avenir.</p>
+      </div>
+      <div class="card">
+        <div class="ico">◆</div>
+        <h3>Vous avez peut-être déjà essayé certaines choses.</h3>
+        <p>Une formation, une idée, un projet… sans trouver une approche qui s'intègre vraiment à votre quotidien.</p>
+      </div>
+      <div class="card">
+        <div class="ico">◆</div>
+        <h3>Vous ne voulez plus choisir entre ambition et équilibre.</h3>
+        <p>Vous voulez avancer, mais pas au prix de votre temps, de votre énergie ou de votre santé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 4. POUR QUI (préqualification) =============== -->
+<section class="fit">
+  <div class="wrap">
+    <h2>Cette vidéo est-elle faite pour vous&nbsp;?</h2>
+    <p class="lead center narrow">Léticia préfère être transparente : cette approche ne convient pas à tout le monde.</p>
+    <div class="fit-grid">
+      <div class="fit-box yes">
+        <h3>Elle est faite pour vous si…</h3>
+        <ul>
+          <li><b>✓</b>Vous avez déjà une activité (emploi, entreprise, famille) et souhaitez une seconde source de revenus.</li>
+          <li><b>✓</b>Vous pouvez dégager quelques heures par semaine pour un projet qui compte pour vous.</li>
+          <li><b>✓</b>Vous préférez avancer avec un cadre et un accompagnement plutôt que seule.</li>
+          <li><b>✓</b>Vous voulez préserver votre santé et votre équilibre en chemin.</li>
+        </ul>
+      </div>
+      <div class="fit-box no">
+        <h3>Elle n'est probablement pas pour vous si…</h3>
+        <ul>
+          <li><b>✕</b>Vous cherchez de l'argent rapide, sans effort.</li>
+          <li><b>✕</b>Vous n'êtes pas prête à consacrer du temps à un nouveau projet en ce moment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 5. MYSTÈRE =============== -->
+<section class="mystery">
+  <div class="wrap">
+    <div class="mystery-box">
+      <span class="eyebrow">Une première étape simple</span>
+      <h2>Vous n'avez pas besoin de tout savoir maintenant.</h2>
+      <p class="lead"><strong style="color:var(--ink)">Commencez simplement par regarder la vidéo.</strong> Pendant 13 minutes, Léticia vous présente l'approche qu'elle souhaite vous faire découvrir. Vous comprendrez le principe, pourquoi elle a choisi cette voie, et vous déciderez par vous-même si cela mérite d'aller plus loin.</p>
+      <div class="cta-block">
+        <button class="cta js-open" type="button" data-source="mystere">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Je regarde la vidéo gratuite
+        </button>
+        <div class="cta-meta"><span>Gratuit</span><span>13 minutes</span><span>Sans engagement</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 6. LÉTICIA =============== -->
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="portrait">
+      <div class="portrait-img" role="img" aria-label="Portrait de Léticia, fondatrice d'ELEVATE"></div>
+      <div class="tag">Léticia · Fondatrice d'ELEVATE</div>
+    </div>
+    <div>
+      <span class="eyebrow">Qui suis-je&nbsp;?</span>
+      <blockquote>« Je ne voulais pas créer une solution qui demande aux femmes de faire encore plus, alors qu'elles ont déjà énormément à gérer. »</blockquote>
+      <p>J'ai connu cette fatigue de tout donner sans jamais vraiment évoluer. C'est ce qui m'a poussée à créer une autre voie.</p>
+      <p>Aujourd'hui, j'accompagne des femmes qui souhaitent explorer une nouvelle possibilité pour leur avenir financier, en tenant compte de la réalité de leur quotidien.</p>
+      <p class="strong">Mon approche part d'une idée simple : vous n'avez pas nécessairement besoin de faire plus. Vous avez peut-être besoin de faire différemment.</p>
+      <p>Dans la vidéo, je vous explique comment j'en suis arrivée à cette conviction et je vous présente l'approche que je propose.</p>
+      <button class="link-cta js-open" type="button" data-source="leticia">▶ Découvrir mon approche</button>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 7. PREMIÈRE ÉTAPE =============== -->
+<section class="step">
+  <div class="wrap narrow center">
+    <h2>Une première étape qui ne vous engage à rien</h2>
+    <p class="lead">Vous n'avez aucune décision à prendre aujourd'hui. <strong style="color:var(--ink)">Regardez simplement la vidéo.</strong> Prenez 13 minutes pour comprendre l'approche et voir si elle résonne avec votre situation.</p>
+    <div class="cta-block" style="margin-top:26px">
+      <button class="cta js-open" type="button" data-source="premiere_etape">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Accéder à la vidéo gratuite
+      </button>
+      <p class="micro">Votre curiosité est la seule chose nécessaire pour commencer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 8. FAQ =============== -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-list">
+      <details>
+        <summary>La vidéo est-elle vraiment gratuite&nbsp;?</summary>
+        <p>Oui. L'accès à la vidéo est entièrement gratuit et sans engagement.</p>
+      </details>
+      <details>
+        <summary>Combien de temps dure la vidéo&nbsp;?</summary>
+        <p>Environ 13 minutes. Vous pouvez la regarder à votre rythme, depuis votre téléphone ou votre ordinateur.</p>
+      </details>
+      <details>
+        <summary>À qui s'adresse cette vidéo&nbsp;?</summary>
+        <p>Principalement aux femmes actives qui souhaitent découvrir une autre façon d'envisager leur avenir financier, sans bouleverser leur quotidien.</p>
+      </details>
+      <details>
+        <summary>Dois-je avoir des compétences particulières&nbsp;?</summary>
+        <p>Non. Aucune expertise préalable n'est requise pour regarder la vidéo et comprendre l'approche.</p>
+      </details>
+      <details>
+        <summary>Pourquoi me demande-t-on mon numéro de téléphone&nbsp;?</summary>
+        <p>Pour que l'équipe de Léticia puisse vous recontacter si vous souhaitez échanger avec elle après la vidéo. Vos informations ne sont jamais revendues.</p>
+      </details>
+      <details>
+        <summary>Est-ce que je dois m'engager après avoir regardé la vidéo&nbsp;?</summary>
+        <p>Non. Vous êtes libre de simplement regarder la vidéo et de décider ensuite si vous souhaitez aller plus loin.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 9. CTA FINAL =============== -->
+<section class="final">
+  <div class="wrap narrow">
+    <h2>Et si 13 minutes pouvaient vous faire voir les choses autrement&nbsp;?</h2>
+    <p class="lines"><b>Regardez la vidéo.</b> Comprenez l'approche. Et faites-vous votre propre idée.</p>
+    <div class="cta-block">
+      <button class="cta js-open" type="button" data-source="final">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Je regarde la vidéo gratuite
+      </button>
+      <div class="cta-meta"><span>13 minutes</span><span>Gratuit</span><span>Sans engagement</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://systeme.elevatelifinsy.com/conditions" target="_blank" rel="noopener">Conditions générales</a>
+      <a href="https://systeme.elevatelifinsy.com/confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a>
+      <a href="https://systeme.elevatelifinsy.com/mentions" target="_blank" rel="noopener">Mentions légales</a>
+    </div>
+    <p>© <span id="year">2026</span> ELEVATE — Life &amp; Income System. Tous droits réservés.</p>
+    <p>Les résultats dépendent de l'implication, de la situation et des efforts de chaque personne. Aucun résultat financier n'est garanti.</p>
+    <p>Ce site ne fait pas partie du site web de Facebook ou de Meta Platforms, Inc. et n'est pas approuvé par Facebook de quelque manière que ce soit. FACEBOOK est une marque déposée de Meta Platforms, Inc.</p>
+  </div>
+</footer>
+
+<!-- Barre CTA fixe sur mobile -->
+<div class="sticky" id="sticky">
+  <button class="cta js-open" type="button" data-source="sticky_mobile">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    Voir la vidéo gratuite (13 min)
+  </button>
+</div>
+
+<!-- =============== POP-UP =============== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Fermer" id="modal-close">×</button>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="step-label">Étape 1 sur 2</div>
+    <h3 id="modal-title">Votre vidéo est à quelques secondes</h3>
+    <p class="sub">Indiquez où vous envoyer votre accès gratuit.</p>
+
+    <form id="optin" novalidate>
+      <div class="form-error" id="form-error" role="alert"></div>
+      <div class="field">
+        <label for="first_name">Prénom</label>
+        <input id="first_name" name="first_name" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+      </div>
+      <div class="field">
+        <label for="email">Adresse courriel</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="vous@exemple.com" required>
+      </div>
+      <div class="field">
+        <label for="phone">Téléphone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+1 514 555 0123" value="+1 " required>
+        <div class="hint">Pour être recontactée si vous souhaitez échanger avec Léticia.</div>
+      </div>
+      <!-- Anti-spam (champ invisible) -->
+      <div class="hp" aria-hidden="true"><label>Site web<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <label class="consent" id="consent-wrap">
+        <input type="checkbox" id="consent" name="consent" value="yes">
+        <span>J'accepte de recevoir par courriel l'accès à la vidéo ainsi que les messages d'ELEVATE (Léticia). Je peux me désabonner à tout moment.</span>
+      </label>
+
+      <button class="cta" type="submit" id="submit-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <span>Accéder à la vidéo</span>
+      </button>
+      <p class="privacy">13 min · Gratuit · Sans engagement<br>Vos informations restent confidentielles. <a href="https://systeme.elevatelifinsy.com/confidentialite" target="_blank" rel="noopener">Confidentialité</a></p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var cfg = window.ELEVATE_CONFIG;
+  var modal = document.getElementById('modal');
+  var form = document.getElementById('optin');
+  var errBox = document.getElementById('form-error');
+  var btn = document.getElementById('submit-btn');
+  var lastSource = 'inconnu';
+  var lastFocus = null;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function track(){ if (window.fbq) { try { fbq.apply(null, arguments); } catch(e){} } }
+
+  // --- Paramètres d'URL (UTM, fbclid) conservés pour le suivi ---
+  var qs = new URLSearchParams(location.search);
+  var utm = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function(k){
+    if (qs.get(k)) utm[k] = qs.get(k);
+  });
+  function cookie(name){
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+
+  // --- Ouverture / fermeture du pop-up ---
+  function openModal(source){
+    lastSource = source || 'inconnu';
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ document.getElementById('first_name').focus(); }, 60);
+    track('trackCustom', 'OuverturePopup', { source: lastSource });
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.js-open').forEach(function(el){
+    el.addEventListener('click', function(){ openModal(el.getAttribute('data-source')); });
+  });
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // --- Barre CTA mobile : visible après le hero, masquée sur le CTA final ---
+  var sticky = document.getElementById('sticky');
+  var hero = document.getElementById('top');
+  var finalSec = document.querySelector('.final');
+  var heroOut = false, finalIn = false;
+  function refreshSticky(){ sticky.classList.toggle('show', heroOut && !finalIn); }
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ heroOut = !en[0].isIntersecting; refreshSticky(); }, {threshold:0}).observe(hero);
+    new IntersectionObserver(function(en){ finalIn = en[0].isIntersecting; refreshSticky(); }, {threshold:0.2}).observe(finalSec);
+  }
+
+  // --- Validation ---
+  function showError(msg){ errBox.textContent = msg; errBox.style.display = 'block'; }
+  function clearErrors(){
+    errBox.style.display = 'none';
+    form.querySelectorAll('.invalid').forEach(function(el){ el.classList.remove('invalid'); });
+  }
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+  function validPhone(v){ return v.replace(/\D/g,'').length >= 8; }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearErrors();
+    var data = {
+      first_name: form.first_name.value.trim(),
+      email: form.email.value.trim().toLowerCase(),
+      phone: form.phone.value.trim(),
+      consent: form.consent.checked,
+      website: form.website.value,
+      source: lastSource,
+      page_url: location.href,
+      fbp: cookie('_fbp'),
+      fbc: cookie('_fbc') || (utm.fbclid ? 'fb.1.' + Date.now() + '.' + utm.fbclid : ''),
+      utm: utm,
+      event_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2,9)
+    };
+
+    var bad = [];
+    if (!data.first_name) bad.push(form.first_name);
+    if (!validEmail(data.email)) bad.push(form.email);
+    if (!validPhone(data.phone)) bad.push(form.phone);
+    if (bad.length){
+      bad.forEach(function(el){ el.classList.add('invalid'); });
+      bad[0].focus();
+      return showError('Merci de vérifier les champs en rouge.');
+    }
+    if (!data.consent){
+      document.getElementById('consent-wrap').classList.add('invalid');
+      return showError('Merci de cocher la case pour recevoir votre accès à la vidéo.');
+    }
+
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Un instant…';
+
+    fetch(cfg.SUBSCRIBE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, body: j }; }); })
+    .then(function(res){
+      if (!res.ok) throw new Error(res.body && res.body.error || 'Erreur');
+      track('track', 'Lead', { content_name: 'Video ELEVATE 13min' }, { eventID: data.event_id });
+      btn.querySelector('span').textContent = 'C\'est parti !';
+      var dest = res.body.redirect || cfg.FALLBACK_VIDEO_URL;
+      setTimeout(function(){ location.href = dest; }, 350);
+    })
+    .catch(function(err){
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Accéder à la vidéo';
+      showError(err && err.message && err.message !== 'Erreur' ? err.message : 'Une erreur est survenue. Merci de réessayer dans quelques secondes.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
