@@ -50,6 +50,13 @@ async function getTagId() {
   return cachedTagId;
 }
 
+// Jeton signé (identifie le contact sur la page vidéo sans exposer son email)
+function signToken(cid) {
+  const secret = process.env.TRACK_SECRET || crypto.createHash("sha256").update("elv:" + process.env.SYSTEMEIO_API_KEY).digest("hex");
+  const sig = crypto.createHmac("sha256", secret).update(String(cid)).digest("base64").replace(/[^a-zA-Z0-9]/g, "").slice(0, 22);
+  return cid + "." + sig;
+}
+
 function sha256(v) {
   return crypto.createHash("sha256").update(String(v).trim().toLowerCase()).digest("hex");
 }
@@ -160,7 +167,9 @@ module.exports = async function handler(req, res) {
     // 3) API Conversions Meta (non bloquant pour l'utilisatrice)
     await sendCapiLead(req, { ...p, first_name, email, phone });
 
-    return res.status(200).json({ ok: true, redirect });
+    let dest = redirect;
+    if (contact && contact.id) dest += (redirect.includes("?") ? "&" : "?") + "t=" + encodeURIComponent(signToken(contact.id));
+    return res.status(200).json({ ok: true, redirect: dest });
   } catch (e) {
     console.error("Erreur subscribe", e);
     return res.status(500).json({ error: "Une erreur est survenue. Merci de réessayer." });
