@@ -510,6 +510,16 @@
   .portrait:hover .portrait-img{transform:none}
   @media (max-width:960px){ .portrait{max-width:320px} .portrait .badge-top{right:-8px} }
   @media (max-width:680px){ .portrait{max-width:280px} .portrait .badge-top{top:60%;right:-12px;font-size:12px;padding:8px 11px} .portrait .name{font-size:13.5px;padding:10px 18px} }
+
+  /* Mobile : « Qui suis-je ? » au-dessus de la photo */
+  @media (max-width:960px){
+    .about-grid{display:flex;flex-direction:column;gap:0}
+    .about-text{display:contents}
+    .about-text > *{order:2}
+    .about-text > .eyebrow{order:0;align-self:center;margin-bottom:34px}
+    .about-grid > .portrait{order:1;margin-bottom:58px}
+    .about-text > .link-cta{align-self:center}
+  }
 </style>
 </head>
 <body>
